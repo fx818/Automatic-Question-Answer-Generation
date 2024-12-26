@@ -1,6 +1,17 @@
 import spacy
 from transformers import pipeline
 
+# Function to download the model
+def download_spacy_model(model_name="en_core_web_sm"):
+    try:
+        spacy.cli.download(model_name)
+        print(f"Model '{model_name}' downloaded successfully!")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Download the model
+download_spacy_model()
+
 # Load SpaCy model for NER
 nlp_spacy = spacy.load("en_core_web_sm")
 
