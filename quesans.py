@@ -1,7 +1,7 @@
 import spacy
 from transformers import pipeline
 
-spacy.cli.download("en_core_web_sm", user=True)
+spacy.cli.download("en_core_web_sm")
 
 # Load SpaCy model for NER
 nlp_spacy = spacy.load("en_core_web_sm")
