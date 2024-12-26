@@ -6,3 +6,4 @@ torch
 spacy
 tiktoken
 blobfile
+sentencepiece
