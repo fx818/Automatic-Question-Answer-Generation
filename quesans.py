@@ -1,7 +1,32 @@
 import spacy
 from transformers import pipeline
 
-spacy.cli.download("en_core_web_sm")
+
+
+import subprocess
+
+try:
+    subprocess.run(
+        [
+            "python",
+            "-m",
+            "pip",
+            "install",
+            "--user",
+            "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0.tar.gz",
+        ],
+        check=True,
+    )
+    print("Model installed successfully with --user!")
+except subprocess.CalledProcessError as e:
+    print(f"Error during installation: {e}")
+
+
+
+
+
+
+# spacy.cli.download("en_core_web_sm")
 
 # Load SpaCy model for NER
 nlp_spacy = spacy.load("en_core_web_sm")
