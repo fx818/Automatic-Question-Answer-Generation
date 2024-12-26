@@ -1,5 +1,5 @@
 streamlit
 transformers
-keras==2.13.1
+tf-keras
 tensorflow
 spacy
