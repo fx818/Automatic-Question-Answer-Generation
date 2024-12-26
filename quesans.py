@@ -29,7 +29,8 @@ from transformers import pipeline
 # spacy.cli.download("en_core_web_sm")
 
 # Load SpaCy model for NER
-nlp_spacy = spacy.load("en_core_web_sm")
+model_path = "en_core_web_sm-3.5.0/en_core_web_sm/en_core_web_sm-3.5.0/"
+nlp_spacy = spacy.load(model_path)
 
 # Load the question generation model
 nlp_qg = pipeline("text2text-generation", model="valhalla/t5-base-qg-hl")
