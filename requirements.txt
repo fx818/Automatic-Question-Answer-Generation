@@ -4,3 +4,4 @@ tf-keras
 tensorflow
 torch
 spacy
+tiktoken
